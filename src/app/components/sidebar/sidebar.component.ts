@@ -9,12 +9,15 @@ declare interface RouteInfo {
 }
 export const ROUTES: RouteInfo[] = [
     { path: '/dashboard', title: 'Dashboard',  icon: 'ni-tv-2 text-primary', class: '' },
-    { path: '/icons', title: 'Icons',  icon:'ni-planet text-blue', class: '' },
-    { path: '/maps', title: 'Maps',  icon:'ni-pin-3 text-orange', class: '' },
-    { path: '/user-profile', title: 'User profile',  icon:'ni-single-02 text-yellow', class: '' },
-    { path: '/tables', title: 'Tables',  icon:'ni-bullet-list-67 text-red', class: '' },
-    { path: '/login', title: 'Login',  icon:'ni-key-25 text-info', class: '' },
-    { path: '/register', title: 'Register',  icon:'ni-circle-08 text-pink', class: '' }
+    { path: '/profiling', title: 'Profiling',  icon:'ni-active-40 text-yellow', class: '' },
+    { path: '/deal', title: 'Deals',  icon:'ni-tag text-blue', class: '' },
+    { path: '/brand', title: 'Brands',  icon:'ni-badge text-pink', class: '' },
+    { path: '/category', title: 'Categories',  icon:'ni-archive-2 text-orange', class: '' },
+    { path: '/product', title: 'Products',  icon:'ni-box-2 text-blue', class: '' },
+    { path: '/video', title: 'Videos',  icon:'ni-button-play text-red', class: '' },
+    { path: '/article', title: 'Articles',  icon:'ni-paper-diploma text-yellow', class: '' },
+    { path: '/user', title: 'Users',  icon:'ni-single-02 text-primary', class: '' },
+    { path: '/clinic', title: 'Clinics',  icon:'ni-ambulance text-orange', class: '' },
 ];
 
 @Component({

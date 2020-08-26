@@ -1,17 +1,16 @@
-<div class="header bg-gradient-danger py-7 py-lg-8">
+<div class="header bg-gradient-white py-7 py-lg-8">
   <div class="container">
     <div class="header-body text-center mb-7">
       <div class="row justify-content-center">
         <div class="col-lg-5 col-md-6">
-          <h1 class="text-white">Welcome!</h1>
-          <p class="text-lead text-light">Use these awesome forms to login or create new account in your project for free.</p>
+          <img src="./assets/img/brand/logo.png" class="navbar-brand-img" alt="...">
         </div>
       </div>
     </div>
   </div>
   <div class="separator separator-bottom separator-skew zindex-100">
     <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+      <polygon class="fill-pink" points="2560 0 2560 100 0 100"></polygon>
     </svg>
   </div>
 </div>
@@ -20,7 +19,7 @@
   <div class="row justify-content-center">
     <div class="col-lg-5 col-md-7">
       <div class="card bg-secondary shadow border-0">
-        <div class="card-header bg-transparent pb-5">
+        <!-- <div class="card-header bg-transparent pb-5">
           <div class="text-muted text-center mt-2 mb-3"><small>Sign in with</small></div>
           <div class="btn-wrapper text-center">
             <a href="javascript:void(0)" class="btn btn-neutral btn-icon">
@@ -32,11 +31,11 @@
               <span class="btn-inner--text">Google</span>
             </a>
           </div>
-        </div>
+        </div> -->
         <div class="card-body px-lg-5 py-lg-5">
-          <div class="text-center text-muted mb-4">
+          <!-- <div class="text-center text-muted mb-4">
             <small>Or sign in with credentials</small>
-          </div>
+          </div> -->
           <form role="form">
             <div class="form-group mb-3">
               <div class="input-group input-group-alternative">
@@ -61,7 +60,7 @@
               </label>
             </div>
             <div class="text-center">
-              <button type="button" class="btn btn-primary my-4">Sign in</button>
+              <button type="button" class="btn btn-primary my-4" [routerLink]="['/dashboard']" >Sign in</button>
             </div>
           </form>
         </div>
