@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.cdk-global-overlay-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+mat-dialog-container#modal-component {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 #2222222b;
+}
+.cdk-overlay-pane {
+    margin: 40px auto;
+}

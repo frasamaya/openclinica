@@ -12,42 +12,59 @@
     <div class="col">
       <div class="card shadow">
         <div class="card-header border-0">
-          <h3 class="mb-0">Data Profiling</h3>
+          <h3 class="mb-0">Subject Matrix</h3>
+          <button class="btn btn-primary my-4" (click)="addsubject()">Add New Subject</button>
         </div>
         <div class="table-responsive">
-          <table class="table align-items-center table-flush">
+          <table datatable class="table align-items-center table-flush">
             <thead class="thead-light">
               <tr>
-                <th scope="col">Question</th>
+                <th scope="col">Study Subject ID</th>
+                <th scope="col">Subject Status</th>
+                <th scope="col">Site ID</th>
+                <th scope="col">OID</th>
+                <th scope="col">Sex</th>
                 <th scope="col"></th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">
-                  <div class="media align-items-center">
-                    <div class="media-body">
-                      <span class="mb-0 text-sm">What is your skin tones?</span>
-                    </div>
-                  </div>
-                </th>
+              <tr *ngIf="loading">
+                <td colspan="5">Loading...</td>
+              </tr>
+              <tr *ngFor="let item of data">
+                <td>
+                  {{item.label}}
+                </td>
+                <td>
+                  {{item.status}}
+                </td>
+                <td>
+                  {{item.name}}
+                </td>
+                <td>
+                  {{item.oc_oid}}
+                </td>
+                <td>
+                  {{item.gender}}
+                </td>
                 <td class="text-right">
                   <div ngbDropdown placement="bottom-right">
                     <a class="btn btn-sm btn-icon-only text-light"  ngbDropdownToggle>
                       <i class="fas fa-ellipsis-v"></i>
                     </a>
                     <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
-                      <a class="dropdown-item" href="javascript:void(0)">Action</a>
-                      <a class="dropdown-item" href="javascript:void(0)">Another action</a>
-                      <a class="dropdown-item" href="javascript:void(0)">Something else here</a>
+                      <a class="dropdown-item" href="javascript:void(0)">View</a>
+                      <a class="dropdown-item" href="javascript:void(0)">Remove</a>
+                      <a class="dropdown-item" href="javascript:void(0)">Reassign</a>
                     </div>
                   </div>
                 </td>
               </tr>
+              
             </tbody>
           </table>
         </div>
-        <div class="card-footer py-4">
+        <!-- <div class="card-footer py-4">
           <nav aria-label="...">
             <ul class="pagination justify-content-end mb-0">
               <li class="page-item disabled">
@@ -71,7 +88,7 @@
               </li>
             </ul>
           </nav>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

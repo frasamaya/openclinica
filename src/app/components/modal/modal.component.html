@@ -1,0 +1,60 @@
+<div id="modal-content-wrapper">
+    <header id="modal-header">
+        <h1 id="modal-title">Add New Subject</h1>
+    </header>
+    <section id="modal-body">
+        <form role="form" (ngSubmit)="createStudy(form)" #form="ngForm">
+          <div class="form-group">
+            <label>Study Subject ID</label>
+            <div class="input-group input-group-alternative mb-3">
+              <input class="form-control" name="subjectId"  [(ngModel)]="data.subjectId" type="text" required="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Person ID</label>
+            <div class="input-group input-group-alternative mb-3">
+              <input class="form-control" name="personId" [(ngModel)]="data.personId" type="text" required="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Enrollment Date</label>
+
+            <div class="input-group input-group-alternative mb-3">
+              <input class="form-control" name="enrollmentDate" [(ngModel)]="data.enrollmentDate" type="date" required="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Sex</label>
+            <div class="input-group input-group-alternative mb-3">
+              <select class="form-control" name="sex" [(ngModel)]="data.sex" >
+              	<option value="m">Male</option>
+              	<option value="f">Female</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Date of Birth</label>
+            <div class="input-group input-group-alternative mb-3">
+              <input class="form-control" name="dateOfBirth" [(ngModel)]="data.dateOfBirth" type="date" required="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Study Event</label>
+            <div class="input-group input-group-alternative mb-3">
+              <input class="form-control" name="studyEvent" [(ngModel)]="data.studyEvent" type="text" required="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Start Date	</label>
+            <div class="input-group input-group-alternative mb-3">
+              <input class="form-control" name="startDate" [(ngModel)]="data.startDate" type="date" required="">
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary mt-4"><span *ngIf="!loading">Create account</span><span *ngIf="loading">Loading...</span></button>
+            <button type="button" class="btn btn-secondary mt-4" (click)="close()">Cancel</button>
+          </div>
+        </form>
+    </section>
+</div>

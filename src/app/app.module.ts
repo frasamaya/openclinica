@@ -1,7 +1,8 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RestProvider } from '../providers/rest/rest';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -9,20 +10,11 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
-import { ProfilingComponent } from './pages/profiling/profiling.component';
-import { DealComponent } from './pages/deal/deal.component';
-import { CategoryComponent } from './pages/category/category.component';
-import { BrandComponent } from './pages/brand/brand.component';
-import { ProductComponent } from './pages/product/product.component';
-import { VideoComponent } from './pages/video/video.component';
-import { ArticleComponent } from './pages/article/article.component';
-import { UserComponent } from './pages/user/user.component';
-import { ClinicComponent } from './pages/clinic/clinic.component';
-import { AdminComponent } from './pages/admin/admin.component';
-
+import { StudyComponent } from './pages/study/study.component';
 
 @NgModule({
   imports: [
@@ -32,24 +24,17 @@ import { AdminComponent } from './pages/admin/admin.component';
     ComponentsModule,
     NgbModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDialogModule
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     AuthLayoutComponent,
-    ProfilingComponent,
-    DealComponent,
-    CategoryComponent,
-    BrandComponent,
-    ProductComponent,
-    VideoComponent,
-    ArticleComponent,
-    UserComponent,
-    ClinicComponent,
-    AdminComponent
+    StudyComponent
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [RestProvider],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
